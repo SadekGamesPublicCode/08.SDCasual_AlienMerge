@@ -1,0 +1,13 @@
+MORPINOS EVOLUTION GAMEPLAY SCRIPT
+1. CORE GAMEPLAY: Merge to grown
+1.1. Rule of merge
+-> Must match 2 same morpinos
+-> Must full-grown before advance to other sub-specie
+-> Ground/Naval respective
+-> To grow into subspecies, need traits
+1.2. Traits
+-> Collect via: dropbox/giftbox/misterybox, conquer other planet, shop
+-> Traits list for easier to track
+1.3. Conquer other planet
+-> product base, grown in number, choose fit planet to conquer
+-> planet type allow player to rise diffirence kind of subspecie
