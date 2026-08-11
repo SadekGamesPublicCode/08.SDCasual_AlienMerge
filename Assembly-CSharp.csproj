@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F31CB3FE-543E-EBFD-C9EE-A1729D874514}</ProjectGuid>
+    <ProjectGuid>{54C4C6EA-045D-F09A-858A-718D3C5C7ED4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,13 +60,14 @@
     <Analyzer Include="D:\Unity Setup\Unity Engine\2022.3.62f2\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MainThemeSC.cs" />
+    <Compile Include="Assets\Scripts\ShopSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Gigant&amp;Terra\Terra01SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Mega&amp;Prima\Prima03SC.cs" />
     <Compile Include="Assets\Scripts\UI_Control\HiveSC.cs" />
     <Compile Include="Assets\Scripts\Internal Manager\MergeSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Drakinos\Drakinos01.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creepling01SC.cs" />
+    <Compile Include="Assets\OutMoneySC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Gigant&amp;Terra\Terra03SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Mega&amp;Prima\Mega04SC.cs" />
     <Compile Include="Assets\Scripts\Internal Manager\DataSC.cs" />
@@ -86,8 +87,8 @@
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Ara05SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Terror04SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep08SC.cs" />
-    <Compile Include="Assets\ShopSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Terror03SC.cs" />
+    <Compile Include="Assets\Scripts\SoundSC.cs" />
     <Compile Include="Assets\Scripts\UI_Control\DNAVitalSC.cs" />
     <Compile Include="Assets\Scripts\ConquerSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Mega&amp;Prima\Mega02SC.cs" />
@@ -106,7 +107,6 @@
     <Compile Include="Assets\Scripts\Morpinos\Gigant&amp;Terra\Gigant01SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Drakinos\Drakinos02.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Mega&amp;Prima\Mega03SC.cs" />
-    <Compile Include="Assets\SoundSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep07SC.cs" />
     <Compile Include="Assets\Scripts\MenuMN.cs" />
     <Compile Include="Assets\Scripts\TipsSC.cs" />
@@ -119,6 +119,7 @@
     <Compile Include="Assets\Scripts\UI_Control\SettingSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Ara03SC.cs" />
     <Compile Include="Assets\Scripts\SaveSystem.cs" />
+    <Compile Include="Assets\Scripts\MainThemeSC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Gigant&amp;Terra\Gigant02SC.cs" />
     <Compile Include="Assets\Scripts\Morpinos\Creeplings\Creep03SC.cs" />
     <Compile Include="Assets\Scripts\UI_Control\EssensePoolSC.cs" />
@@ -126,9 +127,6 @@
     <Compile Include="Assets\Scripts\Morpinos\Ara&amp;Terror\Ara04SC.cs" />
     <Compile Include="Assets\Scripts\AdConfig.cs" />
     <Compile Include="Assets\Scripts\UI_Control\PatrolEarningSC.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\MORPINOS EVOLUTION GAMEPLAY SCRIPT.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1162,7 +1160,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{F2FF23E8-F126-E91C-58E7-2C15500E0BC7}</Project>
+      <Project>{F4E7CC1C-B990-63F4-733B-27220528E6B7}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

@@ -24,6 +24,7 @@ public class Egg_CreepSC : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        print("on mouse down");
         countToHatch++;
         if(eggStraitTier == 0)
         {
@@ -35,73 +36,52 @@ public class Egg_CreepSC : MonoBehaviour
             }
         }else if(eggStraitTier == 1)
         {
-            //Arachiling + Terrorling + Drakinos
-            if (eggStraitDNA == 0)
+            hatchProgress.fillAmount += 0.2f;
+            if(countToHatch >= 5)
             {
-                //Arachiling
-                hatchProgress.fillAmount += 0.2f;
-                if (countToHatch >= 5)
+                int tempRandToHatch;
+                tempRandToHatch = Random.Range(0, 100);
+                if(tempRandToHatch >= 50)
                 {
-                    SpawnAra(); 
-                }
-
-            }else if (eggStraitDNA == 2)
-            {
-                //Terrorling
-                hatchProgress.fillAmount += 0.2f;
-                if (countToHatch >= 5)
+                    SpawnAra();
+                } else if(tempRandToHatch < 50)
                 {
                     SpawnTerror();
-                }
-            }
-            else if( eggStraitDNA == 3)
-            {
-                //Drakninos
-                hatchProgress.fillAmount += 0.2f;
-                if (countToHatch >= 5)
-                {
-                    SpawnDraki();
                 }
             }
         }else if(eggStraitTier == 2)
         {
             //Megarhinos + Primanso
-            if (eggStraitDNA == 4)
+            hatchProgress.fillAmount += 0.2f;
+            if (countToHatch >= 5)
             {
-                //Megarhinos
-                hatchProgress.fillAmount += 0.2f;
-                if (countToHatch >= 5)
+                int tempRandToHatch;
+                tempRandToHatch = Random.Range(0, 100);
+                if (tempRandToHatch >= 50)
                 {
                     SpawnMega();
                 }
-            }
-            else if (eggStraitDNA == 5)
-            {
-                //Primanos
-                hatchProgress.fillAmount += 0.2f;
-                if (countToHatch >= 5)
+                else if (tempRandToHatch < 50)
                 {
                     SpawnPrima();
                 }
             }
         } else if(eggStraitTier == 3)
         {
-            //Terranos + Gigantinos
-            if (eggStraitDNA == 6)
+            hatchProgress.fillAmount += 0.2f;
+            if (countToHatch >= 5)
             {
-                //Gigantinos
-                hatchProgress.fillAmount += 0.2f;
-                if (countToHatch >= 5)
+                int tempRandToHatch;
+                tempRandToHatch = Random.Range(0, 100);
+                if (tempRandToHatch >= 50)
                 {
                     SpawnGigant();
                 }
-            }
-            else if (eggStraitDNA == 7)
-            {
-                //Terranos
-                hatchProgress.fillAmount += 0.2f;
-                SpawnTerra();
-            }
+                else if (tempRandToHatch < 50)
+                {
+                    SpawnTerra();
+                }
+            }       
         }
 
     }

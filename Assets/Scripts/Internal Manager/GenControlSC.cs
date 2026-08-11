@@ -7,7 +7,6 @@ public class GenControlSC : MonoBehaviour
 {
     [HideInInspector] public string today;
     [HideInInspector] MenuMN menuCtr;
-    [HideInInspector] ConquerSC conquerCtr;
 
     [SerializeField] DataSC dataCtr;
     [SerializeField] SettingSC settingCtr;
@@ -46,9 +45,6 @@ public class GenControlSC : MonoBehaviour
         if (sceneOrder == 1)
         {
             Invoke(nameof(AssistMenuCtr), 1f);
-        }else if(sceneOrder == 2)
-        {
-            Invoke(nameof(AssistConquerCtr), 1f);
         }
     }
     private void AssistAdsMn()
@@ -61,10 +57,6 @@ public class GenControlSC : MonoBehaviour
     {
         menuCtr = GameObject.Find("CAN_MainCan").GetComponent<MenuMN>();
         menuCtr.OnUpdateCurPowerUI(curPower);
-    }
-    private void AssistConquerCtr()
-    {
-        conquerCtr = GameObject.Find("ConquerMN").GetComponent<ConquerSC>(); 
     }
     private void ShowRatePnl() => ratePnl.gameObject.SetActive(true);
     public void OnShowSetting(bool isShow)

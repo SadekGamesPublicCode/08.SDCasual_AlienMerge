@@ -288,4 +288,5 @@ public class MergeSC : MonoBehaviour
     {
         genCtr.IncreaseCurPower();
     }
+    public void OnSpawnEggFromShop(int eggOrder) => Instantiate(prefEggCreep[eggOrder], Vector3.zero, Quaternion.identity);
 }
