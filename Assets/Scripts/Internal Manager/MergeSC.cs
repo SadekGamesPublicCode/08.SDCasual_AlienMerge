@@ -6,7 +6,8 @@ public class MergeSC : MonoBehaviour
 {
     [HideInInspector] GenControlSC genCtr;
     [HideInInspector] DataSC dataSC;
-
+    [SerializeField] MenuMN menuCtr;
+ 
     [SerializeField] List<GameObject> creeplingToSpawn = new List<GameObject>();
     //
     [SerializeField] List<GameObject> araToSpawn = new List<GameObject>();
@@ -29,16 +30,27 @@ public class MergeSC : MonoBehaviour
     private Vector3 spawnPos;
     int pairedCount, curPower;
     float spawnRateDelay;
+    int spawnRateCount;
     void Start()
     {
         spawnRateDelay = 5f;
+        spawnRateCount = -1;
         genCtr = GameObject.Find("GenMN").GetComponent<GenControlSC>();
         dataSC = GameObject.Find("GenMN").GetComponent<DataSC>();
         InvokeRepeating(nameof(SpawnEggCreepling), 0f, spawnRateDelay);
+        InvokeRepeating(nameof(OnHandleUpdateSpawnProgress), 0f, 1f);
         pairedCount = 0;
 
         SpawnOnInit();
     }
+       private void OnHandleUpdateSpawnProgress()
+   {
+       spawnRateCount++;
+       print("in spawn rate count");
+       if(spawnRateCount > spawnRateDelay) spawnRateCount = 0;
+       menuCtr.OnUpdateSpawnProgressBar(spawnRateCount);
+
+   }
     private void SpawnEggCreepling()
     {
         int tempPosX, tempPosY;

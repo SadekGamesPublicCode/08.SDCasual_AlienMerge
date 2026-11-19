@@ -12,6 +12,8 @@ public class MenuMN : MonoBehaviour
 
     [SerializeField] Text curMoney, curGems, curPower;
     [SerializeField] Text curSpawnBoost, curSpawnAmount;
+    [SerializeField] Slider eggSpawnProgressSlide;
+    [SerializeField] Image eggToSpawnImg;
     void Start()
     {
         genCtr = GameObject.Find("GenMN").GetComponent<GenControlSC>();
@@ -64,5 +66,9 @@ public class MenuMN : MonoBehaviour
     public void OnShowAdsReward()
     {
         adsMN.ShowAds(2);
+    }
+    public void OnUpdateSpawnProgressBar(float spawnRateCount)
+    {
+        eggSpawnProgressSlide.value = spawnRateCount;
     }
 }
